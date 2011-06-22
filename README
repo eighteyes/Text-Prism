@@ -1,0 +1,22 @@
+Text Prism
+By: Sean Canton <sean@8isc.com>
+Date: 6/22/11
+
+Version 1
+
+Overview: Changes colors in words using a word index based approach and RGB CSS generation.
+
+Usage: 
+1) Load JQuery, Load Plugin.
+
+2) Setup word index as array of word positions. ( 'cat' is at index 2 in "The lazy cat snoozed upon the grey sofa" )
+EX: var wordIndex = [0, 4, 14];
+
+3) Setup color index as a nested array of RGB values
+EX: var colorIndex = [ [0,0,0], [120,120,120], [255,0,0] ];
+
+4) Call the plugin and pass in the settings.
+
+$('#target').textPrism(wordIndex, colorIndex)
+
+This will replace the HTML in #target with psuedo-spans around every word. This is what controls the color through a CSS3 :nth-of-type selector.
